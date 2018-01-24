@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2017 Grap, OCA   
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+
+<openerp><data>
+
+        <record model="account.tax.template" id="tva_reduite">
+            <field name="name">TEST TVA collectée (vente) 5,5%</field>
+        </record>
+
+</data></openerp>
