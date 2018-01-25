@@ -18,6 +18,6 @@
         "account",
     ],
     "data": [
-        'views/grap_account_tax_template.xml',
+        'views/account_tax_template.xml',
     ],
 }
