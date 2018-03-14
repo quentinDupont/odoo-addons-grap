@@ -126,7 +126,7 @@ License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
                         </div>
                         <div class="organic_text">
                             <!-- Organic warning, if any -->
-                            <t t-if="not line.product_id.pricetag_organic_text_ignore">
+                            <t t-if="not line.product_id.pricetag_organic_text">
                                 <t t-esc="line.product_id.pricetag_organic_text"/><br/>
                             </t>
                         </div>
@@ -148,12 +148,12 @@ License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
                             <t t-if="line.product_id.weight_net">Poids net<br/><b><t t-esc="line.product_id.weight_net"/> kg</b><br/></t>
                         </div>
                         <div class="product_price_per_uom_price floating_box">
-                            <t t-if="line.product_id.price_volume">Prix au litre<br/><b><t t-esc="line.product_id.price_volume"/> €</b><br/></t>
-                            <t t-if="line.product_id.price_weight_net">Prix au kg<br/><b><t t-esc="line.product_id.price_weight_net"/> €</b><br/></t>
+                            <t t-if="line.product_id.pricetag_price_volume">Prix au litre<br/><b><t t-esc="line.product_id.pricetag_price_volume"/> €</b><br/></t>
+                            <t t-if="line.product_id.pricetag_price_weight_net">Prix au kg<br/><b><t t-esc="line.product_id.pricetag_price_weight_net"/> €</b><br/></t>
                         </div>
                         <div class="product_image">
-                            <t t-if="line.product_id.pricetag_image">
-                                <img class="product_image" t-attf-src="data:image/*;base64,{{line.product_id.pricetag_image}}"/>
+                            <t t-if="line.product_id.pricetag_display_spider_chart">
+                                <img class="product_image" t-attf-src="data:image/*;base64,{{line.product_id.spider_chart_image}}"/>
                             </t>
                         </div>
                     </div>
@@ -287,8 +287,8 @@ License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
                             <t t-if="line.product_id.weight_net">Poids net<br/><b><t t-esc="line.product_id.weight_net"/> kg</b><br/></t>
                         </div>
                         <div class="product_price_per_uom_price floating_box">
-                            <t t-if="line.product_id.price_volume">Prix au litre<br/><b><t t-esc="line.product_id.price_volume"/> €</b><br/></t>
-                            <t t-if="line.product_id.price_weight_net">Prix au kg<br/><b><t t-esc="line.product_id.price_weight_net"/> €</b><br/></t>
+                            <t t-if="line.product_id.pricetag_price_volume">Prix au litre<br/><b><t t-esc="line.product_id.pricetag_price_volume"/> €</b><br/></t>
+                            <t t-if="line.product_id.pricetag_price_weight_net">Prix au kg<br/><b><t t-esc="line.product_id.pricetag_price_weight_net"/> €</b><br/></t>
                         </div>
                         <div class="label_bottom_right">
                             <t t-if="line.product_id.ean13"><t t-esc="line.product_id.ean13"/></t>
@@ -417,7 +417,7 @@ License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
                         </div>
                         <div class="organic_text">
                             <!-- Organic warning, if any -->
-                            <t t-if="not line.product_id.pricetag_organic_text_ignore">
+                            <t t-if="not line.product_id.pricetag_organic_text">
                                 <t t-esc="line.product_id.pricetag_organic_text"/><br/>
                             </t>
                         </div>
@@ -439,12 +439,12 @@ License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
                             <t t-if="line.product_id.weight_net">Poids net<br/><b><t t-esc="line.product_id.weight_net"/> kg</b><br/></t>
                         </div>
                         <div class="product_price_per_uom_price floating_box">
-                            <t t-if="line.product_id.price_volume">Prix au litre<br/><b><t t-esc="line.product_id.price_volume"/> €</b><br/></t>
-                            <t t-if="line.product_id.price_weight_net">Prix au kg<br/><b><t t-esc="line.product_id.price_weight_net"/> €</b><br/></t>
+                            <t t-if="line.product_id.pricetag_price_volume">Prix au litre<br/><b><t t-esc="line.product_id.pricetag_price_volume"/> €</b><br/></t>
+                            <t t-if="line.product_id.pricetag_price_weight_net">Prix au kg<br/><b><t t-esc="line.product_id.pricetag_price_weight_net"/> €</b><br/></t>
                         </div>
                         <div class="product_image">
-                            <t t-if="line.product_id.pricetag_image">
-                                <img class="product_image" t-attf-src="data:image/*;base64,{{line.product_id.pricetag_image}}"/>
+                            <t t-if="line.product_id.pricetag_display_spider_chart">
+                                <img class="product_image" t-attf-src="data:image/*;base64,{{line.product_id.spider_chart_image}}"/>
                             </t>
                         </div>
                     </div>
@@ -624,7 +624,7 @@ License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
                     <t t-raw="line.product_id.pricetag_type_id.color"/> -->
                     <div class="label_top" t-attf-style="background-color: {{ line.product_id.pricetag_type_id.color }};">
                         <div class="company_logo" style="background-color:white;">
-                            <img class="company_logo_image" t-attf-src="data:image/*;base64,{{line.product_id.company_id.pricetag_image}}"/>
+                            <img class="company_logo_image" t-attf-src="data:image/*;base64,{{line.product_id.company_id.logo}}"/>
                         </div><!--
                         --><div class="product_name">
                             <t t-esc="line.product_id.name"/>
@@ -672,28 +672,28 @@ License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
                                 </div>
                                 <div class="organic_text">
                                     <!-- Organic warning, if any -->
-                                    <t t-if="not line.product_id.pricetag_organic_text_ignore">
+                                    <t t-if="not line.product_id.pricetag_organic_text">
                                         <t t-esc="line.product_id.pricetag_organic_text"/><br/>
                                     </t>
                                 </div>
                             </div><!--
-                            <t t-if="line.product_id.pricetag_image">
+                            <t t-if="line.product_id.pricetag_display_spider_chart">
                                 <div class="product_price_per_uom_price">
                                     <div class="product_price">
-                                        <t t-if="line.product_id.price_volume"><b><t t-esc="line.product_id.price_volume"/> €</b><span class="product_uom">/L</span><br/></t>
-                                        <t t-if="line.product_id.price_weight_net"><b><t t-esc="line.product_id.price_weight_net"/> €</b><span class="product_uom">/kg</span><br/></t>
+                                        <t t-if="line.product_id.pricetag_price_volume"><b><t t-esc="line.product_id.pricetag_price_volume"/> €</b><span class="product_uom">/L</span><br/></t>
+                                        <t t-if="line.product_id.pricetag_price_weight_net"><b><t t-esc="line.product_id.pricetag_price_weight_net"/> €</b><span class="product_uom">/kg</span><br/></t>
                                     </div>
                                 </div>
                                 <div class="product_image">
-                                    <img class="product_image" t-attf-src="data:image/*;base64,{{line.product_id.pricetag_image}}"/>
+                                    <img class="product_image" t-attf-src="data:image/*;base64,{{line.product_id.spider_chart_image}}"/>
                                 </div>
                             </t>-->
-                            <!--<t t-if="not line.product_id.pricetag_image">-->
-                            <t t-if="line.product_id.pricetag_image">
+                            <!--<t t-if="not line.product_id.pricetag_display_spider_chart">-->
+                            <t t-if="line.product_id.pricetag_display_spider_chart">
                                 <div class="product_price_per_uom_price_big">
                                     <div class="product_price_big">
-                                        <t t-if="line.product_id.price_volume"><b><t t-esc="line.product_id.price_volume"/>€</b><span class="product_uom_big">/L</span><br/></t>
-                                        <t t-if="line.product_id.price_weight_net"><b><t t-esc="line.product_id.price_weight_net"/> €</b><span class="product_uom_big">/kg</span><br/></t>
+                                        <t t-if="line.product_id.pricetag_price_volume"><b><t t-esc="line.product_id.pricetag_price_volume"/>€</b><span class="product_uom_big">/L</span><br/></t>
+                                        <t t-if="line.product_id.pricetag_price_weight_net"><b><t t-esc="line.product_id.pricetag_price_weight_net"/> €</b><span class="product_uom_big">/kg</span><br/></t>
                                     </div>
                                 </div>
                             </t>
