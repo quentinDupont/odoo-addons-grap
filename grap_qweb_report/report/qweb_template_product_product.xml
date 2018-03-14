@@ -105,10 +105,10 @@ License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
             <t t-foreach="line.quantity" t-as="q">
                 <div class="product floating_box">
                     <div class="label_left floating_box">
-                        <div class="product_name">
+                        <div class="product_name" t-attf-style="background-color: {{ line.product_id.pricetag_type_id.color }};">
                             <t t-esc="line.product_id.name"/>
                         </div>
-                        <div class="product_informations">
+                        <div class="product_informations" t-attf-style="background-color: {{ line.product_id.pricetag_type_id.color }};">
                             <t t-if="line.product_id.ean13"><b><t t-esc="line.product_id.ean13"/></b><br/></t>
                             <t t-if=" not line.product_id.ean13">
                                 <t t-if="line.product_id.code"><b><t t-esc="line.product_id.code"/></b><br/></t>
@@ -250,10 +250,10 @@ License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
             <t t-foreach="line.quantity" t-as="q">
                 <div class="product floating_box">
                     <div class="label_left floating_box">
-                        <div class="product_name">
+                        <div class="product_name" t-attf-style="background-color: {{ line.product_id.pricetag_type_id.color }};">
                             <t t-esc="line.product_id.name"/>
                         </div>
-                        <div class="product_informations">
+                        <div class="product_informations" t-attf-style="background-color: {{ line.product_id.pricetag_type_id.color }};">
                             <t t-if="line.product_id.pricetag_origin">Origine : <b><t t-esc="line.product_id.pricetag_origin"/></b><br/></t>
                             <t t-if="not line.product_id.pricetag_origin"><br/></t>
                             <t t-if="line.product_id.maker_description">Producteur : <b><t t-esc="line.product_id.maker_description"/></b><br/></t>
@@ -396,10 +396,10 @@ License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
             <t t-foreach="line.quantity" t-as="q">
                 <div class="product floating_box">
                     <div class="label_left floating_box">
-                        <div class="product_name">
+                        <div class="product_name" t-attf-style="background-color: {{ line.product_id.pricetag_type_id.color }};">
                             <t t-esc="line.product_id.name"/>
                         </div>
-                        <div class="product_informations">
+                        <div class="product_informations" t-attf-style="background-color: {{ line.product_id.pricetag_type_id.color }};">
                             <t t-if="line.product_id.ean13"><b><t t-esc="line.product_id.ean13"/></b><br/></t>
                             <t t-if=" not line.product_id.ean13">
                                 <t t-if="line.product_id.code"><b><t t-esc="line.product_id.code"/></b><br/></t>
