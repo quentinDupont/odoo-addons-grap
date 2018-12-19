@@ -13,9 +13,6 @@ License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
         <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="arch" type="xml">
             <data>
-                <field name="ref" position="attributes">
-                    <attribute name="groups">base.group_no_one</attribute>
-                </field>
                 <field name="category_id" position="attributes">
                     <attribute name="groups">base.group_no_one</attribute>
                 </field>
