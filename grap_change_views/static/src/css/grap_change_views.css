@@ -101,6 +101,10 @@
     text-overflow: ellipsis;
 }
 
+.sortdown,.sortup {
+    background-color: #dbdbdb
+}
+
 /* project - view_task_kanban                                           */
 .openerp span[data-original-title="Remaining hours"] {
     display: none !important;
